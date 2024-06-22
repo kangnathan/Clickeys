@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
+    <title>Custom Color Picker</title>
+    <link rel="stylesheet" href="d-customize.css">
+</head>
+
+<body>
+    <main>
+        <div class="banner">
+            <div class="navbar">
+                <img src="pics/main page logo.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="b-home-page.html">HOME</a></li>
+                    <li><a href="e-about.html">ABOUT</a></li>
+                    <li><a href="a-login.html">LOGOUT</a></li>
+                    <li><a href="f-creator.html">CREATOR</a></li>
+                </ul>
+            </div>
+            <div class="keyboard full-size" id="keyboard">
+                <section class="function region">
+                    <div class="key escape" data-key="escape">Esc</div>
+                    <div class="empty-space-between-keys"></div>
+                    <div class="key f1" data-key="f1">F1</div>
+                    <div class="key f2" data-key="f2">F2</div>
+                    <div class="key f3" data-key="f3">F3</div>
+                    <div class="key f4" data-key="f4">F4</div>
+                    <div class="empty-space-between-keys" aria-hidden="true"></div>
+                    <div class="key f5" data-key="f5">F5</div>
+                    <div class="key f6" data-key="f6">F6</div>
+                    <div class="key f7" data-key="f7">F7</div>
+                    <div class="key f8" data-key="f8">F8</div>
+                    <div class="empty-space-between-keys" aria-hidden="true"></div>
+                    <div class="key f9" data-key="f9">F9</div>
+                    <div class="key f10" data-key="f10">F10</div>
+                    <div class="key f11" data-key="f11">F11</div>
+                    <div class="key f12" data-key="f12">F12</div>
+                </section>
+                <section class="system-control region">
+                    <div class="key printscreen" data-key="printscreen">Prt Sc</div>
+                    <div class="key scrolllock" data-key="scrolllock">Scr Lk</div>
+                    <div class="key pause" data-key="pause">Pause</div>
+                </section>
+                <section class="typewriter region">
+                    <div class="first-row">
+                        <div class="key backquote key--sublegend key--accent--color" data-key="backquote">
+                            <span>~</span>
+                            <span>`</span>
+                        </div>
+                        <div class="key digit1" data-key="digit1">1</div>
+                        <div class="key digit2" data-key="digit2">2</div>
+                        <div class="key digit3" data-key="digit3">3</div>
+                        <div class="key digit4" data-key="digit4">4</div>
+                        <div class="key digit5" data-key="digit5">5</div>
+                        <div class="key digit6" data-key="digit6">6</div>
+                        <div class="key digit7" data-key="digit7">7</div>
+                        <div class="key digit8" data-key="digit8">8</div>
+                        <div class="key digit9" data-key="digit9">9</div>
+                        <div class="key digit0" data-key="digit0">0</div>
+                        <div class="key minus key--sublegend" data-key="minus">
+                            <span>_</span>
+                            <span>-</span>
+                        </div>
+                        <div class="key equal key--sublegend" data-key="equal">
+                            <span>+</span>
+                            <span>=</span>
+                        </div>
+                        <div class="key backspace key--accent--color" data-key="backspace">Backspace</div>
+                    </div>
+
+                    <div class="second-row">
+                        <div class="key tab key--accent--color" data-key="tab">Tab</div>
+                        <div class="key keyq" data-key="keyq">Q</div>
+                        <div class="key keyw" data-key="keyw">W</div>
+                        <div class="key keye" data-key="keye">E</div>
+                        <div class="key keyr" data-key="keyr">R</div>
+                        <div class="key keyt" data-key="keyt">T</div>
+                        <div class="key keyy" data-key="keyy">Y</div>
+                        <div class="key keyu" data-key="keyu">U</div>
+                        <div class="key keyi" data-key="keyi">I</div>
+                        <div class="key keyo" data-key="keyo">O</div>
+                        <div class="key keyp" data-key="keyp">P</div>
+                        <div class="key bracketleft key--sublegend" data-key="bracketleft">
+                            <span>&#123;</span>
+                            <span>[</span>
+                        </div>
+                        <div class="key bracketright key--sublegend" data-key="bracketright">
+                            <span>&#125;</span>
+                            <span>]</span>
+                        </div>
+                        <div class="key backlash key--sublegend key--accent--color" data-key="backlash">
+                            <span>|</span>
+                            <span>\</span>
+                        </div>
+                    </div>
+
+                    <div class="third-row">
+                        <div class="key capslock key--accent--color" data-key="capslock">Caps</div>
+                        <div class="key keya" data-key="keya">A</div>
+                        <div class="key keys" data-key="keys">S</div>
+                        <div class="key keyd" data-key="keyd">D</div>
+                        <div class="key keyf" data-key="keyf">F</div>
+                        <div class="key keyg" data-key="keyg">G</div>
+                        <div class="key keyh" data-key="keyh">H</div>
+                        <div class="key keyj" data-key="keyj">J</div>
+                        <div class="key keyk" data-key="keyk">K</div>
+                        <div class="key keyl" data-key="keyl">L</div>
+                        <div class="key semicolon key--sublegend" data-key="semicolon">
+                            <span>:</span>
+                            <span>;</span>
+                        </div>
+                        <div class="key quote key--sublegend" data-key="quote">
+                            <span>"</span>
+                            <span>'</span>
+                        </div>
+                        <div class="key enter key--accent--color" data-key="enter">Enter</div>
+                    </div>
+
+                    <div class="fourth-row">
+                        <div class="key shiftleft key--accent--color" data-key="shiftleft">Shift</div>
+                        <div class="key keyz" data-key="keyz">Z</div>
+                        <div class="key keyx" data-key="keyx">X</div>
+                        <div class="key keyc" data-key="keyc">C</div>
+                        <div class="key keyv" data-key="keyv">V</div>
+                        <div class="key keyb" data-key="keyb">B</div>
+                        <div class="key keyn" data-key="keyn">N</div>
+                        <div class="key keym" data-key="keym">M</div>
+                        <div class="key comma key--sublegend" data-key="comma">
+                            <span>&#60;</span>
+                            <span>,</span>
+                        </div>
+                        <div class="key period key--sublegend" data-key="period">
+                            <span>&#62;</span>
+                            <span>.</span>
+                        </div>
+                        <div class="key slash key--sublegend" data-key="slash">
+                            <span>?</span>
+                            <span>/</span>
+                        </div>
+                        <div class="key shiftright key--accent--color" data-key="shiftright">Shift</div>
+                    </div>
+
+                    <div class="fifth-row">
+                        <div class="key conrolleft key--accent--color" data-key="conrolleft">Ctrl</div>
+                        <div class="key metaleft osleft key--accent--color" data-key="metaleft">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4875 4875"
+                                aria-label="Windows key icon">
+                                <path
+                                    d="M0 0h2311v2310H0zm2564 0h2311v2310H2564zM0 2564h2311v2311H0zm2564 0h2311v2311H2564"
+                                    fill="#436f8e">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="key altleft key--accent--color" data-key="altleft">Alt</div>
+                        <div class="key space key--accent--color" data-key="space"></div>
+                        <div class="key altright key--accent--color" data-key="altright">Alt</div>
+                        <div class="key metaleft osright key--accent--color" data-key="metaright">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4875 4875"
+                                aria-label="Windows key icon">
+                                <path
+                                    d="M0 0h2311v2310H0zm2564 0h2311v2310H2564zM0 2564h2311v2311H0zm2564 0h2311v2311H2564"
+                                    fill="#436f8e">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="key controlright key--accent--color" data-key="controlright">Ctrl</div>
+                    </div>
+                </section>
+
+                <section class="navigation region">
+                    <div class="key insert key--accent-color" data-key="insert">Insert</div>
+                    <div class="key keyhome key--accent-color" data-key="home">Home</div>
+                    <div class="key pageup key--accent-color" data-key="pageup">Pg Up</div>
+                    <div class="key delete key--accent-color" data-key="delete">Delete</div>
+                    <div class="key end key--accent-color" data-key="end">End</div>
+                    <div class="key pagedown key--accent-color" data-key="pagedown">Pg Dn</div>
+                    <div class="key arrowup" aria-label="Up Arrow key" data-key="arrowup">&#8593;</div>
+                    <div class="key arrowleft" aria-label="Left Arrow key" data-key="arrowleft">&#8592;</div>
+                    <div class="key arrowdown" aria-label="Down Arrow key" data-key="arrowdown">&#8595;</div>
+                    <div class="key arrowright" aria-label="Right Arrow key" data-key="arrowright">&#8594;</div>
+                </section>
+            </div>
+        <div class="modal">
+            <div class="colorContainer">
+                <button class="button-29" id="bgColorButton">Background Color</button>
+                <div id="bgColorDisplay" class="colorContainer">
+                    <div id="bgColorBox" class="colorDisplay"></div>
+                    <span id="bgColorText" class="colorText"></span>
+                </div>
+                <div id="bgColorPicker" class="hidden"></div>
+            </div>
+            <div class="colorContainer">
+                <button class="button-29" id="textColorButton">Text Color</button>
+                <div id="textColorDisplay" class="colorContainer">
+                    <div id="textColorBox" class="colorDisplay"></div>
+                    <span id="textColorText" class="colorText"></span>
+                </div>
+                <div id="textColorPicker" class="hidden"></div>
+            </div>
+            <button class="button-29" id="clearColorsButton">Clear Colors</button> 
+            <button class="button-29" id="saveSettingButton">Save Setting</button>
+            <button class="button-29" id="saveConfigurationButton">Save Configuration</button>
+        </div>
+        </div>
+
+    </main>
+    <div id="preview">
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bgColorButton = document.getElementById('bgColorButton');
+            const bgColorBox = document.getElementById('bgColorBox');
+            const bgColorText = document.getElementById('bgColorText');
+            const bgColorPicker = Pickr.create({
+                el: '#bgColorPicker',
+                theme: 'classic',
+                default: '#ffffff',
+                components: {
+                    preview: true,
+                    opacity: true,
+                    hue: true,
+                    interaction: {
+                        hex: true,
+                        rgba: true,
+                        hsla: true,
+                        hsva: true,
+                        cmyk: true,
+                        input: true
+                    }
+                }
+            });
+
+            const textColorButton = document.getElementById('textColorButton');
+            const textColorBox = document.getElementById('textColorBox');
+            const textColorText = document.getElementById('textColorText');
+            const textColorPicker = Pickr.create({
+                el: '#textColorPicker',
+                theme: 'classic',
+                default: '#000000',
+                components: {
+                    preview: true,
+                    opacity: true,
+                    hue: true,
+                    interaction: {
+                        hex: true,
+                        rgba: true,
+                        hsla: true,
+                        hsva: true,
+                        cmyk: true,
+                        input: true
+                    }
+                }
+            });
+
+            let selectedKey = null;
+            let savedBgColor = null;
+            let savedTextColor = null;
+
+            document.getElementById('keyboard').addEventListener('click', (event) => {
+                if (event.target.classList.contains('key')) {
+                    selectedKey = event.target;
+                    if (savedBgColor !== null && savedTextColor !== null) {
+                        applySavedSetting(selectedKey);
+                    }
+                }
+            });
+
+            bgColorButton.addEventListener('click', () => {
+                if (selectedKey) {
+                    bgColorPicker.show();
+                } else {
+                    alert('Please select a key first.');
+                }
+            });
+
+            textColorButton.addEventListener('click', () => {
+                if (selectedKey) {
+                    textColorPicker.show();
+                } else {
+                    alert('Please select a key first.');
+                }
+            });
+
+            bgColorPicker.on('change', (color) => {
+                const bgColor = color.toHEXA().toString();
+                if (selectedKey) {
+                    selectedKey.style.backgroundColor = bgColor;
+                    updateColorDisplay(bgColorBox, bgColorText, bgColor);
+                }
+            });
+
+            textColorPicker.on('change', (color) => {
+                const textColor = color.toHEXA().toString();
+                if (selectedKey) {
+                    selectedKey.style.color = textColor;
+                    updateColorDisplay(textColorBox, textColorText, textColor);
+                }
+            });
+
+            document.getElementById('saveSettingButton').addEventListener('click', () => {
+                savedBgColor = bgColorPicker.getColor().toHEXA().toString();
+                savedTextColor = textColorPicker.getColor().toHEXA().toString();
+                alert('Setting saved!');
+            });
+
+            document.getElementById('saveConfigurationButton').addEventListener('click', () => {
+                const configuration = [];
+                document.querySelectorAll('.key').forEach(key => {
+                    configuration.push({
+                        key: key.dataset.key,
+                        bgColor: key.style.backgroundColor,
+                        textColor: key.style.color
+                    });
+                });
+                const configName = prompt('Enter a name for this configuration:');
+                if (configName) {
+                    localStorage.setItem(configName, JSON.stringify(configuration));
+                    alert('Configuration saved!');
+                }
+            });
+
+            document.getElementById('clearColorsButton').addEventListener('click', () => {
+                document.querySelectorAll('.key').forEach(key => {
+                    key.style.backgroundColor = '';
+                    key.style.color = '';
+                });
+            });
+
+            function applySavedSetting(key) {
+                key.style.backgroundColor = savedBgColor;
+                key.style.color = savedTextColor;
+            }
+
+            function updateColorDisplay(boxElement, textElement, color) {
+                boxElement.style.backgroundColor = color;
+                textElement.textContent = color.toUpperCase();
+            }
+        });
+    </script>
+</body>
+
+</html>

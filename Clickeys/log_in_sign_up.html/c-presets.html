@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Configurations</title>
+    <link rel="stylesheet" href="c-presets.css">
+
+</head>
+
+<body>
+    <div class="side-menu">
+        <h2>Keyboard Presets</h2>
+        <div id="configurationsList"></div>
+        <div class="buttonss">
+            <button id="loadConfigurationButton" class="button-29">Load</button>
+            <button id="deleteConfigurationButton" class="button-29">Delete</button>
+            <button id="captureButton" class="button-29">Capture</button>
+        </div>
+    </div>
+
+    
+        <div class="banner">
+            <div class="navbar">
+                <img src="pics/main page logo.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="b-home-page.html">HOME</a></li>
+                    <li><a href="e-about.html">ABOUT</a></li>
+                    <li><a href="a-login.html">LOGOUT</a></li>
+                    <li><a href="f-creator.html">CREATOR</a></li>
+                </ul>
+            </div>
+            <div class="keyboard full-size" id="keyboard">
+                <section class="function region">
+                    <div class="key escape" data-key="escape">Esc</div>
+                    <div class="empty-space-between-keys"></div>
+                    <div class="key f1" data-key="f1">F1</div>
+                    <div class="key f2" data-key="f2">F2</div>
+                    <div class="key f3" data-key="f3">F3</div>
+                    <div class="key f4" data-key="f4">F4</div>
+                    <div class="empty-space-between-keys" aria-hidden="true"></div>
+                    <div class="key f5" data-key="f5">F5</div>
+                    <div class="key f6" data-key="f6">F6</div>
+                    <div class="key f7" data-key="f7">F7</div>
+                    <div class="key f8" data-key="f8">F8</div>
+                    <div class="empty-space-between-keys" aria-hidden="true"></div>
+                    <div class="key f9" data-key="f9">F9</div>
+                    <div class="key f10" data-key="f10">F10</div>
+                    <div class="key f11" data-key="f11">F11</div>
+                    <div class="key f12" data-key="f12">F12</div>
+                </section>
+                <section class="system-control region">
+                    <div class="key printscreen" data-key="printscreen">Prt Sc</div>
+                    <div class="key scrolllock" data-key="scrolllock">Scr Lk</div>
+                    <div class="key pause" data-key="pause">Pause</div>
+                </section>
+                <section class="typewriter region">
+                    <div class="first-row">
+                        <div class="key backquote key--sublegend key--accent--color" data-key="backquote">
+                            <span>~</span>
+                            <span>`</span>
+                        </div>
+                        <div class="key digit1" data-key="digit1">1</div>
+                        <div class="key digit2" data-key="digit2">2</div>
+                        <div class="key digit3" data-key="digit3">3</div>
+                        <div class="key digit4" data-key="digit4">4</div>
+                        <div class="key digit5" data-key="digit5">5</div>
+                        <div class="key digit6" data-key="digit6">6</div>
+                        <div class="key digit7" data-key="digit7">7</div>
+                        <div class="key digit8" data-key="digit8">8</div>
+                        <div class="key digit9" data-key="digit9">9</div>
+                        <div class="key digit0" data-key="digit0">0</div>
+                        <div class="key minus key--sublegend" data-key="minus">
+                            <span>_</span>
+                            <span>-</span>
+                        </div>
+                        <div class="key equal key--sublegend" data-key="equal">
+                            <span>+</span>
+                            <span>=</span>
+                        </div>
+                        <div class="key backspace key--accent--color" data-key="backspace">Backspace</div>
+                    </div>
+            
+                    <div class="second-row">
+                        <div class="key tab key--accent--color" data-key="tab">Tab</div>
+                        <div class="key keyq" data-key="keyq">Q</div>
+                        <div class="key keyw" data-key="keyw">W</div>
+                        <div class="key keye" data-key="keye">E</div>
+                        <div class="key keyr" data-key="keyr">R</div>
+                        <div class="key keyt" data-key="keyt">T</div>
+                        <div class="key keyy" data-key="keyy">Y</div>
+                        <div class="key keyu" data-key="keyu">U</div>
+                        <div class="key keyi" data-key="keyi">I</div>
+                        <div class="key keyo" data-key="keyo">O</div>
+                        <div class="key keyp" data-key="keyp">P</div>
+                        <div class="key bracketleft key--sublegend" data-key="bracketleft">
+                            <span>&#123;</span>
+                            <span>[</span>
+                        </div>
+                        <div class="key bracketright key--sublegend" data-key="bracketright">
+                            <span>&#125;</span>
+                            <span>]</span>
+                        </div>
+                        <div class="key backlash key--sublegend key--accent--color" data-key="backlash">
+                            <span>|</span>
+                            <span>\</span>
+                        </div>
+                    </div>
+            
+                    <div class="third-row">
+                        <div class="key capslock key--accent--color" data-key="capslock">Caps</div>
+                        <div class="key keya" data-key="keya">A</div>
+                        <div class="key keys" data-key="keys">S</div>
+                        <div class="key keyd" data-key="keyd">D</div>
+                        <div class="key keyf" data-key="keyf">F</div>
+                        <div class="key keyg" data-key="keyg">G</div>
+                        <div class="key keyh" data-key="keyh">H</div>
+                        <div class="key keyj" data-key="keyj">J</div>
+                        <div class="key keyk" data-key="keyk">K</div>
+                        <div class="key keyl" data-key="keyl">L</div>
+                        <div class="key semicolon key--sublegend" data-key="semicolon">
+                            <span>:</span>
+                            <span>;</span>
+                        </div>
+                        <div class="key quote key--sublegend" data-key="quote">
+                            <span>"</span>
+                            <span>'</span>
+                        </div>
+                        <div class="key enter key--accent--color" data-key="enter">Enter</div>
+                    </div>
+            
+                    <div class="fourth-row">
+                        <div class="key shiftleft key--accent--color" data-key="shiftleft">Shift</div>
+                        <div class="key keyz" data-key="keyz">Z</div>
+                        <div class="key keyx" data-key="keyx">X</div>
+                        <div class="key keyc" data-key="keyc">C</div>
+                        <div class="key keyv" data-key="keyv">V</div>
+                        <div class="key keyb" data-key="keyb">B</div>
+                        <div class="key keyn" data-key="keyn">N</div>
+                        <div class="key keym" data-key="keym">M</div>
+                        <div class="key comma key--sublegend" data-key="comma">
+                            <span>&#60;</span>
+                            <span>,</span>
+                        </div>
+                        <div class="key period key--sublegend" data-key="period">
+                            <span>&#62;</span>
+                            <span>.</span>
+                        </div>
+                        <div class="key slash key--sublegend" data-key="slash">
+                            <span>?</span>
+                            <span>/</span>
+                        </div>
+                        <div class="key shiftright key--accent--color" data-key="shiftright">Shift</div>
+                    </div>
+
+<div class="fifth-row">
+    <div class="key conrolleft key--accent--color" data-key="conrolleft">Ctrl</div>
+    <div class="key metaleft osleft key--accent--color" data-key="metaleft">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4875 4875" aria-label="Windows key icon">
+            <path d="M0 0h2311v2310H0zm2564 0h2311v2310H2564zM0 2564h2311v2311H0zm2564 0h2311v2311H2564" fill="#436f8e">
+            </path>
+        </svg>
+    </div>
+    <div class="key altleft key--accent--color" data-key="altleft">Alt</div>
+    <div class="key space key--accent--color" data-key="space"></div>
+    <div class="key altright key--accent--color" data-key="altright">Alt</div>
+    <div class="key metaleft osright key--accent--color" data-key="metaright">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4875 4875" aria-label="Windows key icon">
+            <path d="M0 0h2311v2310H0zm2564 0h2311v2310H2564zM0 2564h2311v2311H0zm2564 0h2311v2311H2564" fill="#436f8e">
+            </path>
+        </svg>
+    </div>
+    <div class="key controlright key--accent--color" data-key="controlright">Ctrl</div>
+</div>
+
+            </section>
+<section class="navigation region">
+    <div class="key insert key--accent--color" data-key="insert">Insert</div>
+    <div class="key keyhome key--accent--color" data-key="home">Home</div>
+    <div class="key pageup key--accent--color" data-key="pageup">Pg Up</div>
+    <div class="key delete key--accent--color" data-key="delete">Delete</div>
+    <div class="key end key--accent--color" data-key="end">End</div>
+    <div class="key pagedown key--accent--color" data-key="pagedown">Pg Dn</div>
+    <div class="key arrowup" aria-label="Up Arrow key" data-key="arrowup">&#8593;</div>
+    <div class="key arrowleft" aria-label="Left Arrow key" data-key="arrowleft">&#8592;</div>
+    <div class="key arrowdown" aria-label="Down Arrow key" data-key="arrowdown">&#8595;</div>
+    <div class="key arrowright" aria-label="Right Arrow key" data-key="arrowright">&#8594;</div>
+</section>
+
+        </div>
+    
+
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const configurationsList = document.getElementById('configurationsList');
+                const loadConfigurationButton = document.getElementById('loadConfigurationButton');
+                const deleteConfigurationButton = document.getElementById('deleteConfigurationButton');
+
+                // Populate side menu with saved configurations
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    const div = document.createElement('div');
+                    div.className = 'config-item';
+                    div.textContent = key;
+                    div.dataset.configKey = key;
+                    configurationsList.appendChild(div);
+                }
+
+                // Event listener to load selected configuration
+                loadConfigurationButton.addEventListener('click', () => {
+                    const selectedConfig = document.querySelector('.config-item.selected');
+                    if (selectedConfig) {
+                        try {
+                            const configuration = JSON.parse(localStorage.getItem(selectedConfig.dataset.configKey));
+                            configuration.forEach(config => {
+                                const keyElement = document.querySelector(`.keyboard .key[data-key="${config.key}"]`);
+                                if (keyElement) {
+                                    keyElement.style.backgroundColor = config.bgColor;
+                                    keyElement.style.color = config.textColor;
+                                } else {
+                                    console.warn(`Key with data-key="${config.key}" not found.`);
+                                }
+                            });
+                            console.log(`Configuration "${selectedConfig.dataset.configKey}" loaded successfully.`);
+                        } catch (error) {
+                            console.error('Error loading configuration:', error);
+                        }
+                    } else {
+                        alert('Please select a configuration to load.');
+                    }
+                });
+
+                // Event listener to delete selected configuration
+                deleteConfigurationButton.addEventListener('click', () => {
+                    const selectedConfig = document.querySelector('.config-item.selected');
+                    if (selectedConfig) {
+                        localStorage.removeItem(selectedConfig.dataset.configKey);
+                        alert(`Configuration "${selectedConfig.dataset.configKey}" deleted successfully.`);
+                        // Remove from side menu
+                        configurationsList.removeChild(selectedConfig);
+                        // Reset keyboard display if needed
+                        document.querySelectorAll('.key').forEach(key => {
+                            key.style.backgroundColor = '';
+                            key.style.color = '';
+                        });
+                    } else {
+                        alert('Please select a configuration to delete.');
+                    }
+                });
+
+                // Event listener to select a configuration from the side menu
+                configurationsList.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('config-item')) {
+                        document.querySelectorAll('.config-item').forEach(item => {
+                            item.classList.remove('selected');
+                        });
+                        e.target.classList.add('selected');
+                    }
+                });
+
+                // Event listener for the capture button
+                const captureButton = document.getElementById('captureButton');
+                captureButton.addEventListener('click', () => {
+                    // Create a new window or tab with only the keyboard content
+                    const newWindow = window.open('', '_blank');
+                    if (newWindow) {
+                        newWindow.document.open();
+                        newWindow.document.write(`
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Captured Keyboard</title>
+                            <style>
+                                .full-size {
+                                    grid-template-columns: 215fr 2fr 45fr 1fr 1fr;
+                                    max-width: 83rem;
+                                    height: 25rem;
+    
+                                }
+
+
+                                .keyboard {
+                                    display: grid;
+                                    margin: 0 auto;
+                                    padding: 1rem;
+                                    border-radius: .4rem;
+                                    border: 1px solid #636363;
+                                    transform: translateZ(0);
+                                    transition: all .2s;
+                                    margin-top: 200px;
+                                    border-radius: 17px;
+                                    background-color:#9d9d9d;
+                                    margin-top: 12%;
+                                }
+
+                                .key {
+                                    font-size: 1.6rem;
+                                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+                                }
+
+                                .key {
+                                    font-size: 1.6rem;
+                                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+                                }
+
+                                .key {
+                                    width: 100%;
+                                    height: var(--standard-key-size);
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: .6rem;
+                                    border: 1px solid 	#636363;
+                                    color: 	#636363;
+                                    font-size: 1.2rem;
+                                    padding: 1px 4px;
+                                    font-weight: 700;
+                                    cursor: pointer;
+                                    white-space: nowrap;
+                                    transition: all .075;
+                                    background-color: white;
+                                }
+
+                                .backquote,
+                                .tab,
+                                .capslock,
+                                .shiftleft,
+                                .controlleft {
+                                    justify-content: left;
+                                    padding-left: 6px;
+                                }
+
+                                .key--sublegend {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: .1rem;
+                                }
+
+                                .first-row {
+                                    grid-template-columns: repeat(13, 1fr) 2fr;
+                                }
+
+                                .second-row {
+                                    grid-template-columns: 1.5fr repeat(12, 1fr) 1.5fr;
+                                }
+
+                                .third-row {
+                                    grid-template-columns: 1.79fr repeat(11, 1fr) 2.29fr;
+                                }
+
+                                .fourth-row {
+                                    grid-template-columns: 2.29fr repeat(10, 1fr) 2.79fr;
+                                }
+
+                                .fifth-row {
+                                    grid-template-columns: repeat(3, 1.29fr) 6.36fr repeat(3, 1.29fr);
+                                }
+
+                                .first-row,
+                                .second-row,
+                                .third-row,
+                                .fourth-row,
+                                .fifth-row {
+                                    display: grid;
+                                    justify-items: center;
+                                    gap: .25rem;
+                                }
+
+                                .backspace,
+                                .enter,
+                                .shiftright,
+                                .controlright {
+                                    justify-content: right;
+                                    padding-right: 6px;
+                                }
+
+                                .function {
+                                    display: grid;
+                                    grid-template-columns: 2fr 2fr repeat(4, 2fr) 1fr repeat(4, 2fr) 1fr repeat(4, 2fr);
+                                }
+
+                                .system-control {
+                                    grid-column: 3;
+                                    display: grid;
+                                    grid-template-columns: repeat(3, 1fr);
+                                }
+
+
+                                .region {
+                                    padding: .5rem;
+                                    gap: .25rem;
+                                }
+
+                                .typewriter {
+                                    grid-row: 2;
+                                    display: grid;
+                                }
+
+                                .navigation {
+                                    grid-column: 3;
+                                    display: grid;
+                                    grid-template-columns: repeat(3, 1fr);
+                                    grid-template-rows: repeat(5, 1fr);
+                                }
+
+                                .numpad {
+                                    transition: all .15s;
+                                }
+
+                                .numpad {
+                                    grid-column: 5;
+                                    display: grid;
+                                    grid-template-columns: repeat(4, 1fr);
+                                    grid-template-rows: repeat(5, 1fr);
+                                }
+
+                                .numpadenter {
+                                    grid-column: 4;
+                                    grid-row: 4 / span 2;
+                                    height: 100%;
+                                }
+
+                                .numpadadd {
+                                    grid-column: 4;
+                                    grid-row: 2 / span 2;
+                                    height: 100%;
+                                }
+
+                                .arrowup {
+                                    grid-column: 2;
+                                    grid-row: 4;
+                                }
+
+                                .arrowleft,
+                                .arrowdown,
+                                .arrowright {
+                                    grid-row: 5;
+                                }
+
+                                section {
+                                    display: block;
+                                    unicode-bidi: isolate;
+                                }
+
+                                * {
+                                    box-sizing: border-box;
+                                }
+
+                                div {
+                                    display: block;
+                                    unicode-bidi: isolate;
+                                }
+
+                                html, body, div, span, object, iframe, p, img, ins, kbd, q, samp, small, strong, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+                                    margin: 0;
+                                    padding: 0;
+                                    border: 0;
+                                    outline: 0;
+                                    font-size: 100%;
+                                    vertical-align: baseline;
+                                    background: 0 0;
+                                }
+
+                                .metaleft svg {
+                                    width: 1.8rem;
+                                    height: 3rem;
+                                    fill: var(--color-keycaps-legends);
+}
+
+                                svg:not(:root) {
+                                    overflow-clip-margin: content-box;
+                                    overflow: hidden;
+                                }
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="keyboard-container">
+                                <div class="keyboard full-size">
+                                    ${document.getElementById('keyboard').innerHTML}
+                                </div>
+                            </div>
+                        </body>
+                        </html>
+                    `);
+                        newWindow.document.close();
+                    } else {
+                        alert('Pop-up window blocked. Please allow pop-ups for this site.');
+                    }
+                });
+            });
+    </script>
+</body>
+
+</html>
